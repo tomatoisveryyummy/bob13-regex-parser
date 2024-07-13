@@ -1,0 +1,8 @@
+# Except executable file
+*.exe
+
+# ... and other compilation artifacts
+lex.yy.c
+*.lex.c
+*.tab.c
+*.tab.h

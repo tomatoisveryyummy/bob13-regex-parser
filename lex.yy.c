@@ -761,7 +761,7 @@ YY_RULE_SETUP
 case 6:
 YY_RULE_SETUP
 #line 21 "fb1-4.l"
-{yylval = atoi(yytext); return NUMBER;}
+{ yylval = atoi(yytext); return NUMBER;}
 	YY_BREAK
 case 7:
 /* rule 7 can match eol */
@@ -772,7 +772,7 @@ YY_RULE_SETUP
 case 8:
 YY_RULE_SETUP
 #line 23 "fb1-4.l"
-{ }
+{ /* ignore whitespace */ }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
@@ -1796,7 +1796,7 @@ main (int argc, char **argv) {
     int tok;
     while   ( tok = yylex() ) {
         printf("%d", tok);
-        if (tok == NUMBER ) printf(" = %d", yylval);
+        if (tok == NUMBER) printf(" = %d\n", yylval);
         else printf("\n");
     }
 }
